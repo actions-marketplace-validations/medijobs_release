@@ -1,7 +1,7 @@
 {
   "name": "@medijobs/release",
   "description": "Node.js and docker github actions compatible semantic-release shareable config to publish to npmjs.com and ghcr.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "files": [
     "release.config.js"
@@ -36,9 +36,14 @@
     "semantic-release-replace-plugin": "^1.2.7"
   },
   "scripts": {
+    "push": "npx @medijobs/conventional-commit",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@medijobs/check-engines": "^1.0.1",
+    "@medijobs/conventional-commit": "^1.0.0"
   }
 }
